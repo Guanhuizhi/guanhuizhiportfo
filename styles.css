@@ -1,0 +1,344 @@
+/*font */
+.figtree-bold {
+    font-family: "Figtree", sans-serif;
+    font-weight: 700; 
+    font-style: normal;
+}
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.dm-serif display-regular {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.dm-serif display-regular-italic {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+/* Body styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Figtree", sans-serif;
+    box-sizing: border-box;
+    background-color: #000000; 
+    color: #FFFFFF; 
+}
+
+#contact {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 20px 0;
+}
+
+/* Navigation styles */
+nav#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #000000;
+}
+
+nav#navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav#navbar ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Figtree", sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+nav#navbar ul li a:hover,
+nav#navbar ul li a:focus {
+    color: #4CAF50; 
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+}
+
+section#home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+}
+
+.text {
+    flex-basis: 50%;
+}
+
+.text h1 {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: "Figtree", sans-serif;
+}
+
+.text p {
+    color: #FFFFFF;
+    line-height: 1.6;
+    font-size: 26px;
+    font-family: "Figtree", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+}
+
+h2 {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-size: 34px;
+    font-family: "Figtree", sans-serif;
+    text-align: center; 
+    line-height: 4; 
+}
+
+
+/*video*/
+
+.video-container {
+    width: 80%; 
+    margin: 20px auto; 
+    display: block; 
+}
+
+.video-container iframe {
+    width: 100%; 
+    height: calc(80vw * 9 / 16); 
+    display: block; 
+}
+
+
+/* gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%; 
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    flex-basis: calc(33.333% - 10px); 
+    margin-bottom: 10px;
+    overflow: hidden; 
+    cursor: pointer; 
+    padding-top: 33.333%; 
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover !important;
+}
+
+
+
+/* ... Remaining styles ... */
+
+@media (max-width: 600px) {
+    .gallery-item {
+        flex-basis: 100%; 
+        padding-top: 100%; 
+    }
+}
+
+/* Hover effects */
+.gallery-item:hover img {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+/* Add styles for .gallery-label for hover effect */
+.gallery-label {
+    font-family: "Figtree", sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
+
+.gallery-item:hover .gallery-label {
+    background-color: rgba(0, 0, 0, 0.8); 
+    font-family: "Figtree", sans-serif;
+}
+
+/* Multimedia */
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px; /* 增加外边距，您可以根据需要调整这个值 */
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+    height: 450px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-item img {
+    width: auto; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.slide-button {
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+/* Newsletter */
+.newsletter {
+    background: #000000;
+    text-align: center;
+    padding: 20px 0; 
+    width: 100%;
+    margin-bottom: 40px; /* 增加外边距，您可以根据需要调整这个值 */
+}
+.newsletter form {
+    display: inline-block;
+    position: relative;
+}
+
+.newsletter label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Figtree", sans-serif;
+}
+
+.newsletter input[type=email] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.newsletter .error-message {
+    color: red;
+    font-size: 0.8em;
+    display: block;
+    margin-top: 10px;
+}
+
+/* footer*/
+
+footer {
+    background-color: #333; 
+    color: white;
+    padding: 30px 0;
+    font-family: "Figtree", sans-serif;
+}
+  
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+.footer-content span, .privacy-link {
+    display: block;
+    margin-bottom: 20px;
+    color: white; 
+    text-decoration: none; 
+    font-family: "Figtree", sans-serif;
+}
+  
+.footer-content span .privacy-link:hover,
+.social-link:hover {
+    opacity: 0.8; 
+    font-family: "Figtree", sans-serif;
+}
+  
+.social-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0 auto;
+}
+  
+.social-link {
+    margin: 0 10px;
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+  
+.social-link img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

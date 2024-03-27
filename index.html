@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guanhuizhi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image/temporary_1646581736072.png" type="image/x-icon">
+    <link rel="shortcut icon" href="image/temporary_1646581736072.png" type="image/x-icon">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let currentIndex = 0;
+            const slides = document.querySelectorAll(".slider-item");
+            const totalSlides = slides.length;
+
+            document.getElementById("prevBtn").addEventListener("click", function() {
+                moveSlider(-1);
+            });
+
+            document.getElementById("nextBtn").addEventListener("click", function() {
+                moveSlider(1);
+            });
+
+            function moveSlider(direction) {
+                if(direction === -1 && currentIndex === 0) {
+                    currentIndex = totalSlides - 1; // wrap to last slide
+                } else if(direction === 1 && currentIndex === totalSlides - 1) {
+                    currentIndex = 0; // wrap to first slide
+                } else {
+                    currentIndex += direction;
+                }
+                document.getElementById("slider").style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#slider">Multimedia</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="text">
+            <h1>Hi! My name is Sukie ZHENG!</h1>
+            <p>You also call me guanhuizhi which is came from my chinses name ZHENG Suiqi. This website is my design portfolio, a collection of my most recent works! Hope you enjoy it!</p>
+        </div>
+        <div class="image">
+            <img src="image/temporary_1646581736072.png" alt="示例图片">
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>- Portfolio -</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="image/垃圾棒棒糖1wwf.png" alt="Poster">
+                <div class="gallery-label">POSTER</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/LOGO2.png" alt="Logo">
+                <div class="gallery-label">LOGO</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/box.png" alt="Branding">
+                <div class="gallery-label">BRANGDING</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/1643059305605.png" alt="Illustrates">
+                <div class="gallery-label">ILLUSTRATES</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/旺角站.png" alt="Photography">
+                <div class="gallery-label">PHOTOGRAPHY</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/Free landscape Book Mockup 09.png" alt="Publication">
+                <div class="gallery-label">PUBLICATION</div>
+            </div>
+        </div>
+    </section>
+      
+    <section id="videos">
+        <h2>- Video work -</h2>
+        <div class="video-container">
+            <iframe src="//player.bilibili.com/player.html?aid=201805657&bvid=BV1oh411d7Qv&cid=225234802&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        </div>
+    </section>  
+    <section id="videos">
+        <h2>- Multimedia -</h2>
+    </section> 
+    <div class="slider-container">
+        <div id="slider" class="slider-content">
+            <!-- The images -->
+            <div class="slider-item"><img src="image/垃圾棒棒糖1wwf.jpg" alt="Image 1"></div>
+            <div class="slider-item"><img src="image/垃圾奧利奧wwf.jpg" alt="Image 2"></div>
+            <div class="slider-item"><img src="image/垃圾糖果2wwf.jpg" alt="Image 3"></div>
+            <div class="slider-item"><img src="image/LOGO2 2.png" alt="Image 4"></div>
+            <div class="slider-item"><img src="image/LOGO1.png" alt="Image 5"></div>
+            <div class="slider-item"><img src="image/card2.png" alt="Image 6"></div>
+            <div class="slider-item"><img src="image/card1.png" alt="Image 7"></div>
+            <div class="slider-item"><img src="image/包装2.png" alt="Image 8"></div>
+            <div class="slider-item"><img src="image/包装3.png" alt="Image 9"></div>
+            <div class="slider-item"><img src="image/包装1.png" alt="Image 10"></div>
+            <div class="slider-item"><img src="image/包装4.png" alt="Image 11"></div>
+            <div class="slider-item"><img src="image/box.png" alt="Image 12"></div>
+            <div class="slider-item"><img src="image/1643059305605.png" alt="Image 13"></div>
+            <div class="slider-item"><img src="image/1643059323856.png" alt="Image 14"></div>
+            <div class="slider-item"><img src="image/1643059365248.png" alt="Image 15"></div>
+            <div class="slider-item"><img src="image/daochu.png" alt="Image 16"></div>
+            <div class="slider-item"><img src="image/fanxiang.png" alt="Image 17"></div>
+            <div class="slider-item"><img src="image/旺角站 2.png" alt="Image 18"></div>
+            <div class="slider-item"><img src="image/氧化4.jpg" alt="Image 19"></div>
+            <div class="slider-item"><img src="image/逃脫4.jpg" alt="Image 20"></div>
+            <div class="slider-item"><img src="image/焦慮2.jpg" alt="Image 21"></div>
+            <div class="slider-item"><img src="image/生長2.jpg" alt="Image 22"></div>
+        </div>
+        <button id="prevBtn" class="slide-button">❮</button>
+        <button id="nextBtn" class="slide-button">❯</button>
+    </div>
+
+    <section id="contact">
+        <div class="newsletter">
+            <form action="#" method="post">
+                <label for="email">Subscribe to My Newsletter</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address Here" required>
+                <button type="submit">Submit</button>
+                <span class="error-message">*This is not a valid email address.</span>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+          <span>The Portfolio of Guanhuizhi © 2024</span>
+          <div class="social-links">
+            </a>
+            <a href="https://www.instagram.com/gguanhuizhi?igsh=Z251OHJ3a204enRy&utm_source=qr" class="social-link facebook" target="_blank">
+              <img src="image/ig.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/suiqi-zheng" class="social-link google-plus" target="_blank">
+              <img src="image/linkin.png" alt="Linkin">
+            </a>
+            <a href=" https://v.douyin.com/iFvasv9j/ 0@0.com" class="social-link pinterest" target="_blank">
+              <img src="image/douyin.png" alt="Douyin">
+            </a>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+</html>
